@@ -16,22 +16,22 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Technologies",
     skills: ["HTML", "CSS", "JavaScript"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-pink-100 to-pink-50"
   },
   {
     title: "Backend Frameworks",
     skills: ["Node.js", "Express.js", "Flask", "PostgreSQL", "MongoDB"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-green-100 to-green-50"
   },
   {
     title: "Databases & Operating Systems",
     skills: ["Linux", "Unix", "Windows", "Ubuntu"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-yellow-100 to-yellow-50"
   },
   {
     title: "Cloud & Infrastructure",
     skills: ["Oracle Cloud Infrastructure (OCI)", "AWS", "Terraform", "Kubernetes"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-indigo-100 to-indigo-50"
   },
   {
     title: "Middleware & Application Servers",
@@ -43,22 +43,22 @@ const skillCategories: SkillCategory[] = [
       "AIA",
       "Apache Tomcat"
     ],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-purple-100 to-purple-50"
   },
   {
     title: "DevOps & CI/CD Tools",
     skills: ["Git", "GitHub", "Jenkins", "CI/CD"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-teal-100 to-teal-50"
   },
   {
     title: "Monitoring & Ticketing Systems",
     skills: ["Splunk", "AppDynamics", "BMC Remedy"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-orange-100 to-orange-50"
   },
   {
     title: "Collaboration & Productivity Tools",
     skills: ["MS Office", "Microsoft Teams", "Zoom", "Canva"],
-    gradient: "from-blue-100 to-blue-50"
+    gradient: "from-rose-100 to-rose-50"
   }
 ];
 
