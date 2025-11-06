@@ -6,13 +6,7 @@ interface SkillCategory {
   skills: string[];
   gradient: string;
 }
-<section
-  id="Skills"
-  className="py-20 md:py-28 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 relative overflow-hidden"
->
-  {/* Decorative gradient circles */}
-  <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-200/40 rounded-full blur-3xl"></div>
-  <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200/50 rounded-full blur-3xl"></div>
+
 const skillCategories: SkillCategory[] = [
   {
     title: "Programming & Scripting",
