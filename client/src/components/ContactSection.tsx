@@ -1,90 +1,79 @@
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Linkedin, Github, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // For prototype - show success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-    
-    console.log('Form submitted:', formData);
-  };
-
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-white">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12">
-        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-contact-title">
-          Get In Touch
-        </h2>
-        <div className="max-w-2xl mx-auto">
-          <Card className="shadow-md">
-            <CardHeader>
-              <CardTitle data-testid="text-contact-subtitle">Send me a message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    data-testid="input-name"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    data-testid="input-email"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Your message..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    data-testid="input-message"
-                  />
-                </div>
-                <Button type="submit" className="w-full rounded-full shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md" data-testid="button-submit">
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+    <section
+      id="contact"
+      className="py-20 md:py-28 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 relative overflow-hidden"
+    >
+      {/* Decorative gradient circles */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-200/40 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200/50 rounded-full blur-3xl"></div>
+
+      <div className="container relative z-10 mx-auto px-6 md:px-8 lg:px-12 text-center">
+        <h2 className="text-4xl font-bold mb-4 text-blue-900">Let’s Connect!</h2>
+        <p className="max-w-2xl mx-auto mb-10 text-gray-700 text-lg text-justify">
+          I’d love to connect with professionals, recruiters, and collaborators interested in technology, 
+          cloud infrastructure, and innovation. Whether you want to discuss an opportunity, a project, 
+          or just share ideas, feel free to reach out anytime!
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <Button
+            asChild
+            variant="outline"
+            className="flex items-center gap-2 px-6 py-3 bg-white text-blue-700 border-blue-300 
+              shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-blue-100 transition-all duration-300"
+          >
+            <a
+              href="https://www.linkedin.com/in/anjanatulasid/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="w-5 h-5" /> LinkedIn
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            className="flex items-center gap-2 px-6 py-3 bg-white text-gray-800 border-gray-300 
+              shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-gray-100 transition-all duration-300"
+          >
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-5 h-5" /> GitHub
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            className="flex items-center gap-2 px-6 py-3 bg-white text-purple-700 border-purple-300 
+              shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-purple-100 transition-all duration-300"
+          >
+            <a href="mailto:anjanatdeverapalli@gmail.com">
+              <Mail className="w-5 h-5" /> Email Me
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            className="flex items-center gap-2 px-6 py-3 bg-white text-green-700 border-green-300 
+              shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-green-100 transition-all duration-300"
+          >
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="w-5 h-5" /> Resume
+            </a>
+          </Button>
         </div>
+
+        
       </div>
     </section>
   );

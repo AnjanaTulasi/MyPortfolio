@@ -7,68 +7,36 @@ interface StickyHeaderProps {
 
 export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b shadow-sm">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 py-4">
-        <div className="flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-blue-50 via-blue-100 to-indigo-100 backdrop-blur-md border-b border-blue-200 shadow-sm">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 py-3">
+        <div className="flex items-center justify-between gap-4 text-gray-800">
+
           {/* Left side - Home button */}
           <Button
             size="default"
             variant="outline"
             onClick={() => onNavigate('hero')}
-            className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
+            className="rounded-full bg-white/70 border-blue-200 hover:bg-blue-100 hover:border-blue-300 text-blue-700 font-semibold shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md"
             data-testid="button-home"
           >
             <Home className="h-4 w-4 mr-2" />
-            Home
+            
           </Button>
 
           {/* Center - Navigation buttons */}
           <div className="hidden md:flex items-center gap-2">
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onNavigate('experience')}
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
-              data-testid="button-nav-experience"
-            >
-              Experience
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onNavigate('skills')}
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
-              data-testid="button-nav-skills"
-            >
-              Skills
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onNavigate('projects')}
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
-              data-testid="button-nav-projects"
-            >
-              Projects
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onNavigate('education')}
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
-              data-testid="button-nav-education"
-            >
-              Education
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onNavigate('contact')}
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md"
-              data-testid="button-nav-contact"
-            >
-              Contact
-            </Button>
+            {["experience", "skills", "projects", "education", "contact"].map((section) => (
+              <Button
+                key={section}
+                size="sm"
+                variant="outline"
+                onClick={() => onNavigate(section)}
+                className="rounded-full bg-white/70 border-blue-200 text-blue-700 font-medium hover:bg-blue-100 hover:border-blue-300 hover:text-blue-800 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md"
+                data-testid={`button-nav-${section}`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </Button>
+            ))}
           </div>
 
           {/* Right side - Social buttons */}
@@ -77,7 +45,7 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
               size="default"
               variant="outline"
               asChild
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2]"
+              className="rounded-full bg-white/70 border-blue-200 text-blue-700 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] hover:shadow-lg hover:scale-110 transition-all duration-300"
               data-testid="button-linkedin"
             >
               <a
@@ -89,11 +57,12 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
                 <Linkedin className="h-4 w-4" />
               </a>
             </Button>
+
             <Button
               size="default"
               variant="outline"
               asChild
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md hover:bg-[#181717] hover:text-white hover:border-[#181717]"
+              className="rounded-full bg-white/70 border-blue-200 text-blue-700 hover:bg-[#181717] hover:text-white hover:border-[#181717] hover:shadow-lg hover:scale-110 transition-all duration-300"
               data-testid="button-github"
             >
               <a
@@ -105,11 +74,12 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
                 <Github className="h-4 w-4" />
               </a>
             </Button>
+
             <Button
               size="default"
               variant="outline"
               asChild
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335]"
+              className="rounded-full bg-white/70 border-blue-200 text-blue-700 hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335] hover:shadow-lg hover:scale-110 transition-all duration-300"
               data-testid="button-email"
             >
               <a
@@ -119,11 +89,12 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
                 <Mail className="h-4 w-4" />
               </a>
             </Button>
+
             <Button
               size="default"
               variant="outline"
               asChild
-              className="rounded-full shadow-sm transition-all duration-200 hover:scale-110 hover:shadow-md hover:bg-[#0056b3] hover:text-white hover:border-[#0056b3]"
+              className="rounded-full bg-white/70 border-blue-200 text-blue-700 hover:bg-[#0056b3] hover:text-white hover:border-[#0056b3] hover:shadow-lg hover:scale-110 transition-all duration-300"
               data-testid="button-resume"
             >
               <a
