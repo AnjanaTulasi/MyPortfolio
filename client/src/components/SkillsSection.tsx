@@ -16,7 +16,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Technologies",
     skills: ["HTML", "CSS", "JavaScript"],
-    gradient: "from-pink-100 to-pink-50"
+    gradient: "from-blue-100 to-blue-50"
   },
   {
     title: "Backend Frameworks",
@@ -58,7 +58,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Collaboration & Productivity Tools",
     skills: ["MS Office", "Microsoft Teams", "Zoom", "Canva"],
-    gradient: "from-rose-100 to-rose-50"
+    gradient: "from-blue-100 to-blue-50"
   }
 ];
 
