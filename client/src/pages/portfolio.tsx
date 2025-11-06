@@ -34,9 +34,9 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen">
-      <StickyHeader />
+      <StickyHeader onNavigate={scrollToSection} />
       <main>
-        <HeroSection onNavigate={scrollToSection} />
+        <HeroSection />
         <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
