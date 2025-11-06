@@ -25,14 +25,14 @@ const education: Education[] = [
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-education-title">
+    <section id="education" className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-education-title">
           Education
         </h2>
         <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
           {education.map((edu, index) => (
-            <Card key={index} className="hover-elevate" data-testid={`card-education-${index}`}>
+            <Card key={index} className="shadow-md hover:shadow-lg transition-shadow duration-200" data-testid={`card-education-${index}`}>
               <CardHeader>
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-md bg-primary/10">

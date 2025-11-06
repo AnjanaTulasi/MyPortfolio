@@ -30,13 +30,13 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-contact-title">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-contact-title">
           Get In Touch
         </h2>
         <div className="max-w-2xl mx-auto">
-          <Card>
+          <Card className="shadow-md">
             <CardHeader>
               <CardTitle data-testid="text-contact-subtitle">Send me a message</CardTitle>
             </CardHeader>
@@ -78,7 +78,7 @@ export default function ContactSection() {
                     data-testid="input-message"
                   />
                 </div>
-                <Button type="submit" className="w-full" data-testid="button-submit">
+                <Button type="submit" className="w-full rounded-full shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md" data-testid="button-submit">
                   Send Message
                 </Button>
               </form>

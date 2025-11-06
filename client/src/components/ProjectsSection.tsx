@@ -50,14 +50,14 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-projects-title">
+    <section id="projects" className="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-projects-title">
           Projects
         </h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="hover-elevate flex flex-col" data-testid={`card-project-${index}`}>
+            <Card key={index} className="shadow-md hover:shadow-lg transition-shadow duration-200 flex flex-col" data-testid={`card-project-${index}`}>
               <CardHeader>
                 <CardTitle className="text-xl" data-testid={`text-project-title-${index}`}>
                   {project.title}

@@ -46,15 +46,15 @@ const skillCategories: SkillCategory[] = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-skills-title">
+    <section id="skills" className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-skills-title">
           Skills
         </h2>
         <div className="max-w-5xl mx-auto space-y-8">
           {skillCategories.map((category, index) => (
             <div key={index} data-testid={`skill-category-${index}`}>
-              <h3 className="text-lg md:text-xl font-semibold mb-4 text-foreground" data-testid={`text-category-${index}`}>
+              <h3 className="text-lg md:text-xl mb-4" data-testid={`text-category-${index}`}>
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">

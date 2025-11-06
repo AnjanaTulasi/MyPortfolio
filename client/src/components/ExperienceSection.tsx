@@ -84,14 +84,14 @@ const experiences: Experience[] = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-16 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-experience-title">
+    <section id="experience" className="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12" data-testid="text-experience-title">
           Experience
         </h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover-elevate" data-testid={`card-experience-${index}`}>
+            <Card key={index} className="shadow-md hover:shadow-lg transition-shadow duration-200" data-testid={`card-experience-${index}`}>
               <CardHeader className="pb-3">
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <CardTitle className="text-xl md:text-2xl flex-1" data-testid={`text-job-title-${index}`}>
