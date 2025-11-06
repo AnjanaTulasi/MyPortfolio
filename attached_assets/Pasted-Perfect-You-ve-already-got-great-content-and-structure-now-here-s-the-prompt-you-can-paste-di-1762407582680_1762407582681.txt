@@ -1,0 +1,90 @@
+Perfect 👍 You’ve already got great content and structure — now here’s the **prompt you can paste directly into Replit** (or any AI website builder tool) to create your **colorful, responsive personal portfolio** with all the functionality you described.
+
+---
+
+### 💡 **Prompt for Replit:**
+
+Create a **colorful, modern, responsive personal portfolio website** for **Anjana Tulasi D**, using **HTML, CSS, and JavaScript (React preferred)**.
+
+#### 🔷 Design Requirements:
+
+* Use a **clean, tech-style theme** (soft gradients, rounded cards, hover effects).
+* Include **smooth scrolling** between sections (Experience, Skills, Projects, Education, Contact).
+* Use a **sticky header bar** at the top of every page.
+
+#### 🔗 **Header Section (Top of Image / Visible on All Pages):**
+
+Add **four rounded icon buttons** aligned horizontally above or near my image:
+
+1. **LinkedIn** → link to `https://www.linkedin.com/in/anjana-tulasi`
+2. **GitHub** → link to `https://github.com/anjanatdeverapalli`
+3. **Email** → link to open `mailto:anjanatdeverapalli@gmail.com`
+4. **Resume (PDF)** → link to `/AnjanaTulasi_D_.pdf` (opens in new tab)
+
+These four buttons should appear in the **header of all pages**, and have subtle hover animations and color accents (LinkedIn blue, GitHub dark gray, Email orange, Resume teal).
+
+#### 🔶 **Landing Page:**
+
+* Display name: **Anjana Tulasi D** in bold large font.
+* Add title: *DevOps & Middleware Engineer* below name.
+* Include a **short summary paragraph** (use text from the first image you uploaded).
+* On the right side, display **my photo**.
+* Below the bio, add buttons for navigation:
+
+  * **Experience**
+  * **Skills**
+  * **Projects**
+  * **Education**
+  * **Contact**
+* When clicked, each button should scroll smoothly to its section.
+
+#### 🔷 **Sections (based on your screenshots):**
+
+1. **Experience**
+
+   * Show cards for each role (use data from screenshots: Vodafone, St. Cloud, etc.)
+   * Include job title, company, location, and dates.
+   * Add bullet points for achievements.
+
+2. **Skills**
+
+   * Create colorful tags or badges for each skill group (Programming, Cloud, Middleware, DevOps Tools, etc.).
+
+3. **Projects**
+
+   * Use cards or tiles with project titles, brief description, and technology stack.
+   * Include your **publication link** for the IoT project.
+
+4. **Education**
+
+   * Add degree, university, and country.
+   * Separate undergrad and graduate sections.
+
+5. **Contact**
+
+   * Simple contact form (Name, Email, Message).
+   * When submitted, it should send an email via `mailto:` or show a thank-you message.
+
+#### 🎨 **Color Palette Suggestion:**
+
+* Primary: `#4A90E2` (Blue)
+* Secondary: `#50E3C2` (Teal)
+* Background: light gradient of blue/white
+* Text: dark gray (`#222`)
+* Buttons: rounded with hover shadows
+
+#### ⚙️ **Technical:**
+
+* Use **React Router** or single-page smooth scroll navigation.
+* Use **Tailwind CSS or CSS Flexbox/Grid** for layout.
+* Responsive for **mobile, tablet, and desktop**.
+
+#### 🧭 **Footer:**
+
+* Add a copyright line:
+
+  > © 2025 Anjana Tulasi D | Built with ❤️ using React
+
+---
+
+Would you like me to generate a **ready-to-paste React code structure** (with section layout, smooth scrolling, and color styling already done) so you can drop it into Replit directly?
