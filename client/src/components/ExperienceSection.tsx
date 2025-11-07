@@ -6,6 +6,8 @@ interface Experience {
   company: string;
   location: string;
   period: string;
+  logo: string; // Added logo field
+  link: string; // Added link field
   responsibilities: string[];
 }
 
@@ -15,6 +17,8 @@ const experiences: Experience[] = [
     company: "NEXT GEN SOFTWARE SOLUTIONS LLC",
     location: "Remote",
     period: "09/2024 to 04/2025",
+    logo: "/logos/nextgen.png",
+    link: "https://www.nextgensoftwaresolutions.com/",
     responsibilities: [
       "Administered Oracle WebLogic, Java Fusion Middleware environments, managing deployments, domain administration, and operational efficiency.",
       "Automated routine operations and monitoring using WLST, Bash, and Python, enhancing efficiency and reducing manual intervention.",
@@ -27,6 +31,8 @@ const experiences: Experience[] = [
     company: "ST CLOUD STATE UNIVERSITY, St. Cloud, MN",
     location: "St. Cloud, MN",
     period: "03/2024 to 05/2025",
+    logo: "/logos/scsu.png",
+    link: "https://www.stcloudstate.edu/",
     responsibilities: [
       "Trained students in Mathematics and Computer Science, simplifying complex technical topics through personalized instruction.",
       "Implemented one-on-one tutoring methods and workshops, increasing student engagement and program usability.",
@@ -38,7 +44,9 @@ const experiences: Experience[] = [
     title: "Graduate Assistantship",
     company: "ST CLOUD STATE UNIVERSITY",
     location: "St. Cloud, MN",
-    period: "03/2024 to 05/2025",
+    period: "01/2023 to 01/2024",
+    logo: "/logos/scsu.png",
+    link: "https://www.stcloudstate.edu/",
     responsibilities: [
       "Mentored undergraduate students in app development and cloud computing, delivering technical guidance and support.",
       "Guided lab assignments and exam coordination, contributing to preparation of lecture materials and assessments.",
@@ -48,9 +56,11 @@ const experiences: Experience[] = [
   },
   {
     title: "Oracle Fusion Middleware / WebLogic Application Support Engineer",
-    company: "VGS VODAFONE, Pune, India",
+    company: "_VOIS(Vodafone Intelligent Solutions), Pune, India",
     location: "Pune, India",
-    period: "11/2019 to 08/2024",
+    period: "11/2019 to 12/2023",
+    logo: "/logos/vodafone.png",
+    link: "https://www.vodafone.com/",
     responsibilities: [
       "Administered and supported Oracle Fusion Middleware components including WebLogic 12c, SOA Suite, OSB, and EM, ensuring high availability and peak system performance across production clusters.",
       "Automated deployment workflows to 95% through scripting in Python, WLST, and Bash, reducing deployment complexity.",
@@ -71,6 +81,8 @@ const experiences: Experience[] = [
     company: "ECR ELECTRONICS CORPORATION OF INDIA LIMITED, Hyderabad, India",
     location: "Hyderabad, India",
     period: "03/2017 to 07/2017",
+    logo: "/logos/ecil.png",
+    link: "https://www.ecil.co.in/",
     responsibilities: [
       "Developed an Android-based voting app with user registration and ballot submission features using Java and Android SDK.",
       "Designed and implemented a user-friendly UI to simplify polling, improving usability.",
@@ -119,23 +131,37 @@ export default function ExperienceSection() {
                   </Badge>
                 </div>
 
-                <div className="space-y-1 text-left">
-                  <p
-                    className="text-base font-semibold text-blue-700"
-                    data-testid={`text-company-${index}`}
+                {/* Company logo + name row */}
+                <div className="flex items-center gap-3 text-left">
+                  <a
+                    href={exp.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0"
                   >
-                    {exp.company}
-                  </p>
-                  <p
-                    className="text-sm text-gray-600"
-                    data-testid={`text-location-${index}`}
-                  >
-                    {exp.location}
-                  </p>
+                    <img
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      className="w-8 h-8 md:w-10 md:h-10 rounded-md object-contain hover:scale-105 transition-transform"
+                    />
+                  </a>
+                  <div>
+                    <p
+                      className="text-base font-semibold text-blue-700"
+                      data-testid={`text-company-${index}`}
+                    >
+                      {exp.company}
+                    </p>
+                    <p
+                      className="text-sm text-gray-600"
+                      data-testid={`text-location-${index}`}
+                    >
+                      {exp.location}
+                    </p>
+                  </div>
                 </div>
               </CardHeader>
 
-              {/* Justified text section with smooth hover visuals */}
               <CardContent className="text-justify">
                 <ul className="list-disc list-outside ml-5 space-y-2">
                   {exp.responsibilities.map((resp, idx) => (
