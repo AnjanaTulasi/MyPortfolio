@@ -46,7 +46,7 @@ const projects: Project[] = [
     description:
       "Developed a Hidden Markov Model for Hindi POS tagging, improving handling of unknown words and smoothing techniques.",
     technologies: ["NLP", "Hidden Markov Model", "Python"],
-    highlights: ["Advanced Hindi NLP technologies (#RHUR2Is8)."]
+    highlights: ["Developed a Hidden Markov Model for Hindi POS tagging, improving handling of unknown words and smoothing techniques, advancing Hindi NLP technologies.#HRJ#2f."]
   }
 ];
 
