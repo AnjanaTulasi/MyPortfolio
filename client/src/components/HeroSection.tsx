@@ -7,9 +7,26 @@ export default function HeroSection() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
         <div className="grid md:grid-cols-[1.3fr_1fr] items-center gap-6 md:gap-12">
 
-          {/* Text Section */}
+          {/* Image Section — first on mobile, second on desktop */}
           <motion.div
-            className="space-y-6 max-w-4xl"
+            className="flex justify-center md:justify-end order-1 md:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          >
+            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-blue-200">
+              <img
+                src={profileImage}
+                alt="Anjana Tulasi D"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center 25%", transform: "scale(1.3)" }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Text Section — second on mobile, first on desktop */}
+          <motion.div
+            className="space-y-6 max-w-4xl order-2 md:order-1"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -45,23 +62,6 @@ export default function HeroSection() {
               Known for a proactive, analytical approach to problem-solving, cross-functional collaboration, and delivering 
               secure, high-availability environments that align with <b>DevOps best practices</b>.
             </p>
-          </motion.div>
-
-          {/* Image Section */}
-          <motion.div
-            className="flex justify-center md:justify-end"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          >
-            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-blue-200">
-              <img
-                src={profileImage}
-                alt="Anjana Tulasi D"
-                className="w-full h-full object-cover"
-                style={{ objectPosition: "center 25%", transform: "scale(1.3)" }}
-              />
-            </div>
           </motion.div>
         </div>
       </div>

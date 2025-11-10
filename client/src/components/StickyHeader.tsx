@@ -8,29 +8,31 @@ interface StickyHeaderProps {
 export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-blue-50 via-blue-100 to-indigo-100 backdrop-blur-md border-b border-blue-200 shadow-sm">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 py-4">
-        <div className="flex items-center justify-between gap-4 text-gray-800">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-3 md:py-4">
+        {/* Outer container: stacks on mobile, side-by-side on desktop */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 sm:gap-3 md:gap-4 text-gray-800">
 
-          {/* Left side - Home button */}
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => onNavigate('hero')}
-            className="rounded-full bg-white/70 border-blue-200 hover:bg-blue-100 hover:border-blue-300 text-blue-700 font-semibold shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md px-5 py-3"
-            data-testid="button-home"
-          >
-            <Home className="h-5 w-5 mr-2" />
-          </Button>
+          {/* Row 1 - Home + Section Buttons */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-3">
+            {/* Home Button */}
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => onNavigate("hero")}
+              className="rounded-full bg-white/70 border-blue-200 hover:bg-blue-100 hover:border-blue-300 text-blue-700 font-semibold shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-3"
+              data-testid="button-home"
+            >
+              <Home className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+            </Button>
 
-          {/* Center - Navigation buttons */}
-          <div className="hidden md:flex items-center gap-3">
+            {/* Section Buttons */}
             {["experience", "skills", "projects", "education", "contact"].map((section) => (
               <Button
                 key={section}
-                size="lg"
+                size="sm"
                 variant="outline"
                 onClick={() => onNavigate(section)}
-                className="rounded-full bg-white/70 border-blue-200 text-blue-700 font-medium hover:bg-blue-100 hover:border-blue-300 hover:text-blue-800 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md px-6 py-3 text-sm md:text-base"
+                className="rounded-full bg-white/70 border-blue-200 text-blue-700 font-medium hover:bg-blue-100 hover:border-blue-300 hover:text-blue-800 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-md px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 text-xs sm:text-sm md:text-base"
                 data-testid={`button-nav-${section}`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -38,74 +40,68 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
             ))}
           </div>
 
-          {/* Right side - Social buttons */}
-          <div className="flex items-center gap-3">
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="rounded-full bg-white/70 border-blue-200 text-blue-700 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] hover:shadow-lg hover:scale-110 transition-all duration-300 p-4"
-              data-testid="button-linkedin"
-            >
-              <a
-                href="https://www.linkedin.com/in/anjanatulasid/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
+          {/* Row 2 - Social & Resume Buttons */}
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3">
+            {[
+              {
+                href: "https://www.linkedin.com/in/anjanatulasid/",
+                icon: <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />,
+                hover: "hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2]",
+                color: "text-blue-700",
+                testid: "button-linkedin",
+                label: "LinkedIn Profile",
+              },
+              {
+                href: "https://github.com/anjanatdeverapalli",
+                icon: <Github className="h-4 w-4 sm:h-5 sm:w-5" />,
+                hover: "hover:bg-[#181717] hover:text-white hover:border-[#181717]",
+                color: "text-gray-800",
+                testid: "button-github",
+                label: "GitHub Profile",
+              },
+              {
+                href: "mailto:anjanatdeverapalli@gmail.com",
+                icon: <Mail className="h-4 w-4 sm:h-5 sm:w-5" />,
+                hover: "hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335]",
+                color: "text-red-700",
+                testid: "button-email",
+                label: "Send Email",
+              },
+              {
+                href: `${import.meta.env.BASE_URL}Resume.pdf`,
+                icon: <FileText className="h-4 w-4 sm:h-5 sm:w-5" />,
+                hover: "hover:bg-[#16A34A] hover:text-white hover:border-[#16A34A]",
+                color: "text-green-700",
+                testid: "button-resume",
+                label: "Download Resume",
+                download: "Anjana_Tulasi_Resume.pdf",
+              },
+            ].map((btn, i) => (
+              <div key={i} className="relative group">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  asChild
+                  className={`rounded-full bg-white/70 border-blue-200 ${btn.color} ${btn.hover} hover:shadow-lg hover:scale-110 transition-all duration-300 p-2 sm:p-3 md:p-4`}
+                  data-testid={btn.testid}
+                >
+                  <a
+                    href={btn.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={btn.label}
+                    {...(btn.download ? { download: btn.download } : {})}
+                  >
+                    {btn.icon}
+                  </a>
+                </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="rounded-full bg-white/70 border-blue-200 text-black-700 hover:bg-[#181717] hover:text-white hover:border-[#181717] hover:shadow-lg hover:scale-110 transition-all duration-300 p-4"
-              data-testid="button-github"
-            >
-              <a
-                href="https://github.com/anjanatdeverapalli"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub Profile"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="rounded-full bg-white/70 border-blue-200 text-red-700 hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335] hover:shadow-lg hover:scale-110 transition-all duration-300 p-4"
-              data-testid="button-email"
-            >
-              <a
-                href="mailto:anjanatdeverapalli@gmail.com"
-                aria-label="Send Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="rounded-full bg-white/70 border-blue-200 text-green-700 hover:bg-[#16A34A] hover:text-white hover:border-[#16A34A] hover:shadow-lg hover:scale-110 transition-all duration-300 p-4"
-
-              data-testid="button-resume"
-            >
-              <a
-                href="/Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Resume"
-              >
-                <FileText className="h-5 w-5" />
-              </a>
-            </Button>
+                {/* Tooltip */}
+                <span className="absolute bottom-[-1.8rem] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] sm:text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                  {btn.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
