@@ -73,7 +73,9 @@ export default function ContactSection() {
           </Button>
         </div>
 
-        
+        <div className="mt-12 text-gray-600 text-sm">
+         
+        </div>
       </div>
     </section>
   );

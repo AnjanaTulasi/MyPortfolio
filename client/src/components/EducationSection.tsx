@@ -14,7 +14,7 @@ const education: Education[] = [
   {
     degree: "Computer Science",
     institution: "St Cloud State University",
-    location: "USA",
+    location: "USA - 2025",
     year: "GRADUATION",
     logo: "/logos/stcloud.png", // place in /public/logos/
     link: "https://www.stcloudstate.edu/"
@@ -22,7 +22,7 @@ const education: Education[] = [
   {
     degree: "Information Technology",
     institution: "SRM Institute of Science and Technology",
-    location: "India",
+    location: "India - 2020",
     year: "UNDER GRADUATION",
     logo: "/logos/srm.png", // place in /public/logos/
     link: "https://www.srmist.edu.in/"
