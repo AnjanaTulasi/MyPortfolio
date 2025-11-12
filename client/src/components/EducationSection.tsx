@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+const baseUrl = import.meta.env.BASE_URL;
 
 interface Education {
   degree: string;
@@ -16,7 +17,7 @@ const education: Education[] = [
     institution: "St Cloud State University",
     location: "USA - 2025",
     year: "GRADUATION",
-    logo: "/logos/stcloud.png", // place in /public/logos/
+    logo: `${baseUrl}logos/scsu.png`, // place in /public/logos/
     link: "https://www.stcloudstate.edu/"
   },
   {
@@ -24,7 +25,7 @@ const education: Education[] = [
     institution: "SRM Institute of Science and Technology",
     location: "India - 2020",
     year: "UNDER GRADUATION",
-    logo: "/logos/srm.png", // place in /public/logos/
+    logo: `${baseUrl}logos/srm.png`, // place in /public/logos/
     link: "https://www.srmist.edu.in/"
   }
 ];

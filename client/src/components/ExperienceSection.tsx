@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+const baseUrl = import.meta.env.BASE_URL;
 
 interface Experience {
   title: string;
@@ -17,7 +18,7 @@ const experiences: Experience[] = [
     company: "NEXT GEN SOFTWARE SOLUTIONS LLC",
     location: "Remote",
     period: "09/2024 to 04/2025",
-    logo: "/logos/nextgen.png",
+    logo: `${baseUrl}logos/nextgen.png`,
     link: "https://www.nextgensoftwaresolutions.com/",
     responsibilities: [
       "Administered Oracle WebLogic, Java Fusion Middleware environments, managing deployments, domain administration, and operational efficiency.",
@@ -31,7 +32,7 @@ const experiences: Experience[] = [
     company: "ST CLOUD STATE UNIVERSITY, St. Cloud, MN",
     location: "St. Cloud, MN",
     period: "03/2024 to 05/2025",
-    logo: "/logos/scsu.png",
+    logo: `${baseUrl}logos/scsu.png`,
     link: "https://www.stcloudstate.edu/",
     responsibilities: [
       "Trained students in Mathematics and Computer Science, simplifying complex technical topics through personalized instruction.",
@@ -45,7 +46,7 @@ const experiences: Experience[] = [
     company: "ST CLOUD STATE UNIVERSITY",
     location: "St. Cloud, MN",
     period: "01/2023 to 01/2024",
-    logo: "/logos/scsu.png",
+    logo: `${baseUrl}logos/scsu.png`,
     link: "https://www.stcloudstate.edu/",
     responsibilities: [
       "Mentored undergraduate students in app development and cloud computing, delivering technical guidance and support.",
@@ -59,7 +60,7 @@ const experiences: Experience[] = [
     company: "_VOIS(Vodafone Intelligent Solutions), Pune, India",
     location: "Pune, India",
     period: "11/2019 to 12/2023",
-    logo: "/logos/vodafone.png",
+    logo: `${baseUrl}logos/vodafone.png`,
     link: "https://www.vodafone.com/",
     responsibilities: [
       "Administered and supported Oracle Fusion Middleware components including WebLogic 12c, SOA Suite, OSB, and EM, ensuring high availability and peak system performance across production clusters.",
@@ -81,7 +82,7 @@ const experiences: Experience[] = [
     company: "ECR ELECTRONICS CORPORATION OF INDIA LIMITED, Hyderabad, India",
     location: "Hyderabad, India",
     period: "03/2017 to 07/2017",
-    logo: "/logos/ecil.png",
+    logo: `${baseUrl}logos/ecil.png`,
     link: "https://www.ecil.co.in/",
     responsibilities: [
       "Developed an Android-based voting app with user registration and ballot submission features using Java and Android SDK.",

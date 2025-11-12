@@ -42,7 +42,7 @@ export default function ContactSection() {
               shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-gray-100 transition-all duration-300"
           >
             <a
-              href="https://github.com/"
+              href="https://github.com/AnjanaTulasi"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,9 +67,13 @@ export default function ContactSection() {
             className="flex items-center gap-2 px-6 py-3 bg-white text-green-700 border-green-300 
               shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-green-100 transition-all duration-300"
           >
-            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
-              <FileText className="w-5 h-5" /> Resume
-            </a>
+            <a
+                href="https://anjanatulasi.github.io/MyPortfolio/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="w-5 h-5" /> Resume
+              </a> 
           </Button>
         </div>
 

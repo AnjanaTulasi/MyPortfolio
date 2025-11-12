@@ -49,7 +49,7 @@ export default function StickyHeader({ onNavigate }: StickyHeaderProps) {
                 label: "LinkedIn Profile",
               },
               {
-                href: "https://github.com/anjanatdeverapalli",
+                href: "https://github.com/AnjanaTulasi",
                 icon: <Github className="h-4 w-4 sm:h-5 sm:w-5" />,
                 color: "text-gray-800",
                 hover:

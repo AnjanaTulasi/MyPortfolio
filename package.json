@@ -9,7 +9,7 @@
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -f",
+    "deploy": "gh-pages -d dist/public  -f",
     "check": "tsc",
     "db:push": "drizzle-kit push"
   },
