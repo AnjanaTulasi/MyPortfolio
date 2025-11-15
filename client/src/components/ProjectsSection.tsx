@@ -48,7 +48,7 @@ const projects: Project[] = [
     technologies: ["NLP", "Hidden Markov Model", "Python"],
     highlights: ["Developed a Hidden Markov Model for Hindi POS tagging, improving handling of unknown words and smoothing techniques, advancing Hindi NLP technologies."]
   }
-];
+]; 
 
 export default function ProjectsSection() {
   return (
