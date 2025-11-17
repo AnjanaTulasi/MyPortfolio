@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     title: "AVATAR",
     description:
-      "Built an open-source project with the Cloud Computing Club (SCSU) using ML and brainwave data from an Arduino headset to remotely pilot a drone.",
+      "Built an open-source project with the Cloud Computing Club (SCSU) using ML and brainwave data from an OpenBCI headset to remotely pilot a drone.",
     technologies: ["Machine Learning", "Arduino", "Apache Spark", "Python", "IoT"],
     highlights: [
       "Processed anonymized brainwave signals with Apache Spark for real-time flight prediction and client-side drone control."
