@@ -36,7 +36,7 @@ const experiences: Experience[] = [
     link: "https://www.stcloudstate.edu/",
     responsibilities: [
       "Trained students in Mathematics and Computer Science, simplifying complex technical topics through personalized instruction.",
-      "Implemented one-on-one tutoring methods and workshops, increasing student engagement and program usability.",
+      "Implemented one-on-one tutoring methods and workshops, increasing student engagement and program visibility.",
       "Helped students in academic planning, financial aid, and career development, ensuring equitable access to educational resources.",
       "Tracked academic progress and adapted tutoring methods to support diverse learning styles and needs."
     ]
