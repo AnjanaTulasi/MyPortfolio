@@ -59,11 +59,11 @@ const experiences: Experience[] = [
     title: "Oracle Fusion Middleware / WebLogic Application Support Engineer",
     company: "_VOIS(Vodafone Intelligent Solutions), Pune, India",
     location: "Pune, India",
-    period: "11/2019 to 12/2023",
+    period: "11/2019 to 12/2022",
     logo: `${baseUrl}logos/vodafone.png`,
     link: "https://www.vodafone.com/",
     responsibilities: [
-      "Administered and supported Oracle Fusion Middleware components including WebLogic 12c, SOA Suite, OSB, and EM, ensuring high availability and peak system performance across production clusters.",
+      "Administered and supported Oracle Fusion Middleware components including WebLogic 12c, SOA Suite, OSB, and Enterprise Manager, ensuring high availability and peak system performance across production clusters.",
       "Automated deployment workflows to 95% through scripting in Python, WLST, and Bash, reducing deployment complexity.",
       "Reduced incident volume by 70% through proactive health checks, automated monitoring, and preventive strategies using Splunk, AppDynamics, and OCI tools.",
       "Managed performance tuning via JVM optimizations, JMS/JDBC resource allocation, and log rotation for better efficiency.",
@@ -79,7 +79,7 @@ const experiences: Experience[] = [
   },
   {
     title: "Internship",
-    company: "ECR ELECTRONICS CORPORATION OF INDIA LIMITED, Hyderabad, India",
+    company: "ECIL (ELECTRONICS CORPORATION OF INDIA LIMITED), Hyderabad, India",
     location: "Hyderabad, India",
     period: "03/2017 to 07/2017",
     logo: `${baseUrl}logos/ecil.png`,
