@@ -21,9 +21,9 @@ const experiences: Experience[] = [
     logo: `${baseUrl}logos/nextgen.png`,
     link: "https://www.nextgensoftwaresolutions.com/",
     responsibilities: [
-      "Administered Oracle WebLogic, Java Fusion Middleware environments, managing deployments, domain administration, and operational efficiency.",
+      "Administered Oracle WebLogic, Oracle Fusion Middleware environments, managing deployments, domain administration, and operational efficiency.",
       "Automated routine operations and monitoring using WLST, Bash, and Python, enhancing efficiency and reducing manual intervention.",
-      "Troubleshot and resolved technical SOA/IAS and Weblogic performance issues, improving platform uptime and service reliability.",
+      "Troubleshot and resolved technical SOA/AIA and WebLogic performance issues, improving platform uptime and service reliability.",
       "Collaborated in Agile teams via Jira, contributing to infrastructure optimization and cloud adoption initiatives."
     ]
   },
