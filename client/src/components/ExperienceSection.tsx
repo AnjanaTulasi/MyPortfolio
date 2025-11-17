@@ -8,7 +8,7 @@ interface Experience {
   location: string;
   period: string;
   logo: string; // Added logo field
-  link: string; // Added link field
+  link: string; // Added link field 
   responsibilities: string[];
 }
 
