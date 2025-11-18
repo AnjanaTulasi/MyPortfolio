@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     company: "NEXT GEN SOFTWARE SOLUTIONS LLC",
     location: "Remote",
     period: "09/2024 to 04/2025",
-    logo: `${baseUrl}logos/nextgen.png`,
+    logo: `${baseUrl}logos/nextgen.png`, 
     link: "https://www.nextgensoftwaresolutions.com/",
     responsibilities: [
       "Administered Oracle WebLogic, Oracle Fusion Middleware environments, managing deployments, domain administration, and operational efficiency.",
